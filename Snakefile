@@ -39,7 +39,8 @@ for a,b in zip(SAMPLES,SAMPLES_PATH):
 rule all:
     input:
         expand('../02_FilteredBedgraphs/{sample}/{sample}_min{filter}.bedgraph',sample=SAMPLES,filter=minAlignments),
-        expand('{outdir}/03_metilene_call_{filter}/dmr_metilene_qval.0.05.bed',filter=minAlignments,outdir=outdir)
+        expand('{outdir}/03_metilene_call_{filter}/dmr_metilene_qval.0.05.bed',filter=minAlignments,outdir=outdir),
+        expand('{outdir}/03_bat_summarize_{filter}/BAT_summarize_summary_case_control.bedgraph.gz',filter=minAlignments,outdir=outdir)
         #f"{outdir}/03_bat/out.txt"
         #'../03_ConcatFilteredBedgraphs/ConcatFilteredBedgraphs.bed',
         #expand('../04_FilterSplitUnionBed/{sample}/{sample}.bed',sample=SAMPLES)
@@ -67,7 +68,9 @@ rule BAT_rule_summrarize:
     threads: 1
     container: "docker://christianbioinf/bat:latest"
     output:
-        bat_sum = "{outdir}/03_bat_summarize_{filter}/BAT_summarize_metilene_case_control.txt"
+        bat_sum = "{outdir}/03_bat_summarize_{filter}/BAT_summarize_metilene_case_control.txt",
+        bat_sum_bg = "{outdir}/03_bat_summarize_{filter}/BAT_summarize_summary_case_control.bedgraph"
+
     shell:
         "cases=$(echo {input.cases}|sed 's/ /,/g');\
          controls=$(echo {input.controls}|sed 's/ /,/g');\
@@ -84,3 +87,13 @@ rule BAT_rule_DMRcalling:
         metilene_call = "{outdir}/03_metilene_call_{filter}/dmr_metilene_qval.0.05.bed"
     shell:
         "BAT_DMRcalling -q {input.bat_sum} -o {outdir}/03_metilene_call_{wildcards.filter}/dmr_metilene -a case -b control"
+
+rule bgzip_tabix:
+    input:
+        bat_sum_bg = "{outdir}/03_bat_summarize_{filter}/BAT_summarize_summary_case_control.bedgraph"
+    threads: 1
+    conda: 'envs/bedtools.yaml'
+    output:
+        bat_sum_bg_bgzip = "{outdir}/03_bat_summarize_{filter}/BAT_summarize_summary_case_control.bedgraph.gz"
+    shell:
+        "bgzip {input.bat_sum_bg}; tabix -p bed {output.bat_sum_bg_bgzip}"
