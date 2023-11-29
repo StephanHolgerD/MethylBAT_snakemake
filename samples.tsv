@@ -1,0 +1,17 @@
+ID	Bedgraph	type
+3000667	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3000667_S15_L003_R1_001.sorted.markDups_CpG.bedGraph	control
+3004928	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3004928_S10_L003_L002_R1_001.sorted.markDups_CpG.bedGraph	control
+3004931	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3004931_S14_L003_L002_R1_001.sorted.markDups_CpG.bedGraph	control
+3025912	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3025912_S12_L003_L002_R1_001.sorted.markDups_CpG.bedGraph	control
+3029136	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3029136_S16_L003_L002_R1_001.sorted.markDups_CpG.bedGraph	control
+3032653	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3032653_S3_L003_R1_001.sorted.markDups_CpG.bedGraph	case
+3033440	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3033440_S4_L003_R1_001.sorted.markDups_CpG.bedGraph	case
+3035441	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3035441_S2_L003_R1_001.sorted.markDups_CpG.bedGraph	case
+3037346	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3037346_S3_L004_R1_001.sorted.markDups_CpG.bedGraph	case
+3037467	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3037467_S2_L004_R1_001.sorted.markDups_CpG.bedGraph	case
+3038295	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3038295_S1_L003_R1_001.sorted.markDups_CpG.bedGraph	case
+3040546	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3040546_S2_L003_R1_001.sorted.markDups_CpG.bedGraph	case
+3040645	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/3040645_S3_L003_R1_001.sorted.markDups_CpG.bedGraph	case
+KoM103B	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/KoM103B_R1_001.sorted.markDups_CpG.bedGraph	control
+KoM106B	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/KoM106B_R1_001.sorted.markDups_CpG.bedGraph	control
+KoW101B	/mnt/d/2023/ITD/ITD_2148_KDM2A_Publication/00_methylseq_data/KoW101B_R1_001.sorted.markDups_CpG.bedGraph	control
