@@ -4,7 +4,7 @@ from glob import glob
 
 annotation_file = '/mnt/raid/users/pilgram/methylome/analysis/Homo_sapiens.GRCh38.108.chr.chr.gff3'
 annotation_file_db = '/mnt/raid/users/pilgram/methylome/analysis/Homo_sapiens.GRCh38.108.chr.chr.db'
-minAlignments = [10,20]
+minAlignments = [10,20,25,30]
 
 bed = 'data/all_Gene_and_CpG_ID_annotations_covered_targets_Twist_Methylome_V1_TE-96341190_hg38.bed'
 df=pd.read_csv("samples.tsv",sep="\t",dtype=object)
