@@ -1,0 +1,1 @@
+snakemake --use-conda --use-singularity --cores 16  --conda-prefix /home/drukewitz/conda_tmp/ -k --rerun-incomplete --rerun-triggers mtime -T 2 --keep-incomplete --singularity-args "-B /mnt/d/2023/ITD/ITD_2476_MethylBat_analyses_ESHG2024/00_pipe/:/mnt/d/2023/ITD/ITD_2476_MethylBat_analyses_ESHG2024/00_pipe/"
