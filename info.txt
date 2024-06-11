@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 snakemake --use-conda --use-singularity --cores 16  --conda-prefix /home/drukewitz/conda_tmp/ -k --rerun-incomplete --rerun-triggers mtime -T 2 --keep-incomplete --singularity-args "-B /mnt/d/2023/ITD/ITD_2476_MethylBat_analyses_ESHG2024/00_pipe/:/mnt/d/2023/ITD/ITD_2476_MethylBat_analyses_ESHG2024/00_pipe/"
+=======
+snakemake --use-conda --cores 8 --conda-prefix /home/drukewitz/conda_tmp/  --use-singularity --singularity-args "-B /mnt/d/2023/ITD/ITD_2476_MethylBat_analyses_ESHG2024/00_pipe_younctrls/:/mnt/d/2023/ITD/ITD_2476_MethylBat_analyses_ESHG2024/00_pipe_younctrls/" -k --rerun-incomplete  --keep-incomplete
+>>>>>>> 4aa811ac1e2913c0121cb3d0e682a34646e3b4dc
